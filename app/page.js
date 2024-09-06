@@ -1,10 +1,17 @@
 "use client";
 import Image from "next/image";
 
+import { useRouter } from "next/navigation";
+
 export default function Home() {
+  const router = useRouter();
   const handleButtonClick = (buttonName) => {
-    // what happens when each button is clicked
-    alert(`${buttonName} button clicked!`);
+    if (buttonName === "Features") {
+      router.push("/features");
+    } else {
+      // what happens when each button is clicked
+      alert(`${buttonName} button clicked!`);
+    }
   };
 
   return (
@@ -24,7 +31,7 @@ export default function Home() {
           </div>
 
           <button
-            onClick={() => handleButtonClick("Primary")}
+            onClick={() => handleButtonClick("Features")}
             className="px-4 py-2 border-2 border-purple-600 rounded-full text-blue-600"
           >
             Features
@@ -33,10 +40,7 @@ export default function Home() {
 
         {/* Top-right corner content */}
         <div className="flex space-x-2">
-          <button
-            onClick={() => handleButtonClick("Button 1")}
-            className="px-4 py-2 border-2 border-purple-600 rounded-full text-blue-600"
-          >
+          <button className="px-4 py-2 border-2 border-purple-600 rounded-full text-blue-600">
             Login
           </button>
           <button
