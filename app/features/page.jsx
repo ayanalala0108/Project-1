@@ -78,11 +78,11 @@ export default function Home() {
                 style={{ height: "auto", width: "100%" }}
               >
                 <Image
-                  src={`/images/image${i}.png`} // Replace with your image paths
+                  src={`/images/image${i}.png`} 
                   alt={`Image ${i}`}
                   layout="responsive"
-                  width={640} // Adjust width as needed
-                  height={480} // Adjust height as needed
+                  width={640} 
+                  height={480} 
                   className="image"
                 />
               </div>
