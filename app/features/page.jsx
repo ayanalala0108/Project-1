@@ -2,16 +2,37 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import "./styles.css";
+import React, { useRef } from "react";
 
 export default function Home() {
   const router = useRouter();
 
-  const handleButtonClick = (buttonName) => {
-    if (buttonName === "Features") {
+  //Refs for each section
+  const sectionsRef = {
+    features: useRef(null),
+    productUpload: useRef(null),
+    buyerAddition: useRef(null),
+    placingOrder: useRef(null),
+    sellerOrders: useRef(null),
+    processOrder: useRef(null),
+    manageOrders: useRef(null),
+    thirdPartyLogistics: useRef(null),
+    ownLogistics: useRef(null),
+    chat: useRef(null),
+    crm: useRef(null),
+    analytics: useRef(null),
+  };
+
+  const handleButtonClick = (sectionName) => {
+    if (sectionName === "Features") {
       router.push("/features");
+    } else if (sectionsRef[sectionName]) {
+      sectionsRef[sectionName].current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     } else {
-      // Handle other button clicks here
-      alert(`${buttonName} button clicked!`);
+      //alert(`${buttonName} button clicked!`);
     }
   };
 
@@ -78,54 +99,129 @@ export default function Home() {
                 style={{ height: "auto", width: "100%" }}
               >
                 <Image
-                  src={`/images/image${i}.png`} // Replace with your image paths
+                  src={`/images/image${i}.png`}
                   alt={`Image ${i}`}
                   layout="responsive"
-                  width={640} // Adjust width as needed
-                  height={480} // Adjust height as needed
+                  width={640}
+                  height={480}
                   className="image"
                 />
               </div>
               <div className="text-container">
                 {i === 1 && (
                   <>
-                    <p className="text-xl">Onboard</p>
-                    <p className="text-l text-purple-500">Product Upload</p>
-                    <p className="text-l text-purple-500">Buyer Addition</p>
+                    <p
+                      className="text-xl"
+                      onClick={() => handleButtonClick("productUpload")}
+                    >
+                      Onboard
+                    </p>
+                    <p
+                      className="text-l text-purple-500"
+                      onClick={() => handleButtonClick("productUpload")}
+                    >
+                      Product Upload
+                    </p>
+                    <p
+                      className="text-l text-purple-500"
+                      onClick={() => handleButtonClick("buyerAddition")}
+                    >
+                      Buyer Addition
+                    </p>
                   </>
                 )}
                 {i === 2 && (
                   <>
-                    <p className="text-xl">Buyer</p>
-                    <p className="text-l text-purple-500">Placing an Order</p>
-                    <p className="text-xl">Seller</p>
-                    <p className="text-l text-purple-500">
+                    <p
+                      className="text-xl"
+                      onClick={() => handleButtonClick("placingOrder")}
+                    >
+                      Buyer
+                    </p>
+                    <p
+                      className="text-l text-purple-500"
+                      onClick={() => handleButtonClick("placingOrder")}
+                    >
+                      Placing an Order
+                    </p>
+                    <p
+                      className="text-xl"
+                      onClick={() => handleButtonClick("sellerOrders")}
+                    >
+                      Seller
+                    </p>
+                    <p
+                      className="text-l text-purple-500"
+                      onClick={() => handleButtonClick("sellerOrders")}
+                    >
                       Your sales staff can take orders from customers
                     </p>
-                    <p className="text-l text-purple-500">Process Order</p>
-                    <p className="text-l text-purple-500">
+                    <p
+                      className="text-l text-purple-500"
+                      onClick={() => handleButtonClick("processOrder")}
+                    >
+                      Process Order
+                    </p>
+                    <p
+                      className="text-l text-purple-500"
+                      onClick={() => handleButtonClick("manageOrders")}
+                    >
                       Manage orders in your whole supply chain
                     </p>
                   </>
                 )}
                 {i === 3 && (
                   <>
-                    <p className="text-xl">Using third party logistics</p>
-                    <p className="text-l text-purple-500">
+                    <p
+                      className="text-xl"
+                      onClick={() => handleButtonClick("thirdPartyLogistics")}
+                    >
+                      Using third party logistics
+                    </p>
+                    <p
+                      className="text-l text-purple-500"
+                      onClick={() => handleButtonClick("thirdPartyLogistics")}
+                    >
                       Choose the courier & ship
                     </p>
-                    <p className="text-xl">Using own Logistics</p>
-                    <p className="text-l text-purple-500">
+                    <p
+                      className="text-xl"
+                      onClick={() => handleButtonClick("ownLogistics")}
+                    >
+                      Using own Logistics
+                    </p>
+                    <p
+                      className="text-l text-purple-500"
+                      onClick={() => handleButtonClick("ownLogistics")}
+                    >
                       Route,optimize,assign & ship
                     </p>
                   </>
                 )}
                 {i === 4 && (
                   <>
-                    <p className="text-xl">Analytics</p>
-                    <p className="text-l text-purple-500">Chat</p>
-                    <p className="text-l text-purple-500">CRM</p>
-                    <p className="text-l text-purple-500">
+                    <p
+                      className="text-xl"
+                      onClick={() => handleButtonClick("analytics")}
+                    >
+                      Analytics
+                    </p>
+                    <p
+                      className="text-l text-purple-500"
+                      onClick={() => handleButtonClick("chat")}
+                    >
+                      Chat
+                    </p>
+                    <p
+                      className="text-l text-purple-500"
+                      onClick={() => handleButtonClick("crm")}
+                    >
+                      CRM
+                    </p>
+                    <p
+                      className="text-l text-purple-500"
+                      onClick={() => handleButtonClick("analytics")}
+                    >
                       Analytics & Reporting
                     </p>
                   </>
@@ -133,6 +229,430 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+      {/* Centered heading section */}
+      <div className="flex justify-center items-center py-8">
+        <h1 className="text-3xl font-semibold text-center">Onboard</h1>
+      </div>
+      {/* New Section with subheading, content, and image */}
+      <div
+        ref={sectionsRef.productUpload}
+        className="flex flex-col lg:flex-row items-center justify-center px-4 py-8"
+      >
+        {/* Subheading */}
+        <div className="flex-1 text-left mb-4 lg:mb-0 lg:text-center">
+          <h3 className="text-xl font-semibold">Product Upload</h3>
+        </div>
+        {/* Content Paragraph */}
+        <div className="flex-1 text-center lg:text-center px-4">
+          <p className="text-lg text-gray-600">
+            Upload your inventory either on at a time or in bulk, Doing it on
+            mobile is as simple as making a facebook post.
+          </p>
+          {/* Button */}
+          <button
+            onClick={() => alert("Button Clicked!")}
+            className="mt-4 text-blue-600 border-b-2 border-blue-600 hover:border-blue-800"
+          >
+            Learn More
+          </button>
+        </div>
+
+        {/* Image */}
+        <div className="flex-1 text-right">
+          <div className="relative w-full max-w-xs">
+            <Image
+              src="/images/productupload.png"
+              alt="Description of image"
+              layout="responsive"
+              width={500}
+              height={300}
+              className="image"
+            />
+          </div>
+        </div>
+      </div>
+      {/* New Section with subheading, content, and image */}
+      <div
+        ref={sectionsRef.buyerAddition}
+        className="flex flex-col lg:flex-row items-center justify-center px-4 py-8"
+      >
+        {/* Subheading */}
+        <div className="flex-1 text-left mb-4 lg:mb-0 lg:text-center">
+          <h3 className="text-xl font-semibold">Buyer Addition</h3>
+        </div>
+        {/* Content Paragraph */}
+        <div className="flex-1 text-center lg:text-center px-4">
+          <p className="text-lg text-gray-600">
+            Add all your customers in one go. Shifting all your customers to a
+            new business platform can’t get easier than this
+          </p>
+          {/* {Button} */}
+          <button
+            onClick={() => alert("Button Clicked!")}
+            className="mt-4 text-blue-600 border-b-2 border-blue-600 hover:border-blue-800"
+          >
+            Learn More
+          </button>
+        </div>
+
+        {/* Image */}
+        <div className="flex-1 text-right">
+          <div className="relative w-full max-w-xs">
+            <Image
+              src="/images/buyeraddition.png"
+              alt="Description of image"
+              layout="responsive"
+              width={500}
+              height={300}
+              className="image"
+            />
+          </div>
+        </div>
+      </div>
+      {/* Centered heading section */}
+      <div className="flex justify-center items-center py-8">
+        <h1 className="text-3xl font-semibold text-center">Manage Orders</h1>
+      </div>
+      <div className="flex justify-center items-left">
+        <h1 className="text-2xl font-semibold text-left">Buyer</h1>
+      </div>
+      {/* New Section with subheading, content, and image */}
+      <div
+        ref={sectionsRef.placingOrder}
+        className="flex flex-col lg:flex-row items-center justify-center px-4 py-8"
+      >
+        {/* Subheading */}
+        <div className="flex-1 text-left mb-4 lg:mb-0 lg:text-center">
+          <h3 className="text-xl font-semibold">Placing an Order</h3>
+        </div>
+        {/* Content Paragraph */}
+        <div className="flex-1 text-center lg:text-center px-4">
+          <p className="text-lg text-gray-600">
+            No more of those mundane B2B sourcing processes. Placing an order is
+            as simple as placing an order in Amazon. All this, while the complex
+            b2b pricing and supply chain logics are taken care of in the
+            backend.
+          </p>
+          {/* Button */}
+          <button
+            onClick={() => alert("Button Clicked!")}
+            className="mt-4 text-blue-600 border-b-2 border-blue-600 hover:border-blue-800"
+          >
+            Learn More
+          </button>
+        </div>
+
+        {/* Image */}
+        <div className="flex-1 text-right">
+          <div className="relative w-full max-w-xs">
+            <Image
+              src="/images/placinganorder.png"
+              alt="Description of image"
+              layout="responsive"
+              width={500}
+              height={300}
+              className="image"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* New Section with subheading, content, and image */}
+      <div className="flex justify-center items-center py-8">
+        <h1 className="text-2xl font-semibold text-left">Seller</h1>
+      </div>
+      <div className="flex flex-col lg:flex-row items-center justify-center px-4 py-8">
+        {/* Subheading */}
+        <div
+          ref={sectionsRef.sellerOrders}
+          className="flex-1 text-left mb-4 lg:mb-0 lg:text-center"
+        >
+          <h3 className="text-xl font-semibold">
+            Your sales staff can take orders from customers
+          </h3>
+        </div>
+        {/* Content Paragraph */}
+        <div className="flex-1 text-center lg:text-center px-4">
+          <p className="text-lg text-gray-600">
+            Logged in as a sales staff, they can take orders from your customers
+            in the app
+          </p>
+          <button
+            onClick={() => alert("Button Clicked!")}
+            className="mt-4 text-blue-600 border-b-2 border-blue-600 hover:border-blue-800"
+          >
+            Learn More
+          </button>
+        </div>
+        {/* Image */}
+        <div className="flex-1 text-right">
+          <div className="relative w-full max-w-xs">
+            <Image src="" alt="" layout="responsive" className="image" />
+          </div>
+        </div>
+      </div>
+
+      {/* New Section with subheading, content, and image */}
+      <div className="flex flex-col lg:flex-row items-center justify-center px-4 py-8">
+        {/* Subheading */}
+        <div
+          ref={sectionsRef.processOrder}
+          className="flex-1 text-left mb-4 lg:mb-0 lg:text-center"
+        >
+          <h3 className="text-xl font-semibold">Process Order</h3>
+        </div>
+        {/* Content Paragraph */}
+        <div className="flex-1 text-center lg:text-center px-4">
+          <p className="text-lg text-gray-600">
+            Confirm, reject, edit, allot it to different warehouses, all of it
+            can happen with a couple of clicks. Easier if done from the mobile
+            app.
+          </p>
+          {/* Button */}
+          <button
+            onClick={() => alert("Button Clicked!")}
+            className="mt-4 text-blue-600 border-b-2 border-blue-600 hover:border-blue-800"
+          >
+            Learn More
+          </button>
+        </div>
+
+        {/* Image */}
+        <div className="flex-1 text-right">
+          <div className="relative w-full max-w-xs">
+            <Image
+              src="/images/processorder.png"
+              alt="Description of image"
+              layout="responsive"
+              width={500}
+              height={300}
+              className="image"
+            />
+          </div>
+        </div>
+      </div>
+      {/* New Section with subheading, content, and image */}
+      <div className="flex flex-col lg:flex-row items-center justify-center px-4 py-8">
+        {/* Subheading */}
+        <div
+          ref={sectionsRef.manageOrders}
+          className="flex-1 text-left mb-4 lg:mb-0 lg:text-center"
+        >
+          <h3 className="text-xl font-semibold">
+            Manage orders in your whole supply chain
+          </h3>
+        </div>
+        {/* Content Paragraph */}
+        <div className="flex-1 text-center lg:text-center px-4">
+          <p className="text-lg text-gray-600">
+            Do you want to manually allot orders to different sellers in your
+            supply chain? Should your sellers be able to control the product
+            prices? Take complete control of the order flow in your supply chain
+          </p>
+        </div>
+
+        {/* Image */}
+        <div className="flex-1 text-right">
+          <div className="relative w-full max-w-xs">
+            <Image
+              src="/images/manageorders.png"
+              alt="Description of image"
+              layout="responsive"
+              width={500}
+              height={300}
+              className="image"
+            />
+          </div>
+        </div>
+      </div>
+      {/* Centered heading section */}
+      <div className="flex justify-center items-center py-8">
+        <h1 className="text-3xl font-semibold text-center">Deliver Goods</h1>
+      </div>
+      <div className="flex justify-center items-left">
+        <h1 className="text-2xl font-semibold text-left">
+          Using third party logistics
+        </h1>
+      </div>
+      {/* New Section with subheading, content, and image */}
+      <div className="flex flex-col lg:flex-row items-center justify-center px-4 py-8">
+        {/* Subheading */}
+        <div
+          ref={sectionsRef.thirdPartyLogistics}
+          className="flex-1 text-left mb-4 lg:mb-0 lg:text-center"
+        >
+          <h3 className="text-xl font-semibold">Choose the courier & ship</h3>
+        </div>
+        {/* Content Paragraph */}
+        <div className="flex-1 text-center lg:text-center px-4">
+          <p className="text-lg text-gray-600">
+            Create shipments of your orders, review the estimated cost and ETA
+            of all major logistics providers and ship using your preferred
+            provider. In mobile app, all these can be done with 6 clicks.
+          </p>
+        </div>
+
+        {/* Image */}
+        <div className="flex-1 text-right">
+          <div className="relative w-full max-w-xs">
+            <Image
+              src="/images/thirdparty.png"
+              alt="Description of image"
+              layout="responsive"
+              width={500}
+              height={300}
+              className="image"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="flex justify-center items-left">
+        <h1 className="text-2xl font-semibold text-left">
+          Using own logistics
+        </h1>
+      </div>
+      {/* New Section with subheading, content, and image */}
+      <div
+        ref={sectionsRef.ownLogistics}
+        className="flex flex-col lg:flex-row items-center justify-center px-4 py-8"
+      >
+        {/* Subheading */}
+        <div className="flex-1 text-left mb-4 lg:mb-0 lg:text-center">
+          <h3 className="text-xl font-semibold">
+            Route optimize, assign & ship
+          </h3>
+        </div>
+        {/* Content Paragraph */}
+        <div className="flex-1 text-center lg:text-center px-4">
+          <p className="text-lg text-gray-600">
+            Create shipments of your orders, we tell you the most optimal routes
+            to deliver these shipments. Assign each route to one of your
+            delivery staff. They can login to their app and see the assigned
+            route, navigate to customer locations, deliver the goods and collect
+            proof of delivery if needed.
+          </p>
+        </div>
+
+        {/* Image */}
+        <div className="flex-1 text-right">
+          <div className="relative w-full max-w-xs">
+            <Image
+              src="/images/own.png"
+              alt="Description of image"
+              layout="responsive"
+              width={500}
+              height={300}
+              className="image"
+            />
+          </div>
+        </div>
+      </div>
+      {/* Centered heading section */}
+      <div className="flex justify-center items-center py-8">
+        <h1 className="text-3xl font-semibold text-center">Analysis & CRM</h1>
+      </div>
+      {/* New Section with subheading, content, and image */}
+      <div className="flex flex-col lg:flex-row items-center justify-center px-4 py-8">
+        {/* Subheading */}
+        <div
+          ref={sectionsRef.chat}
+          className="flex-1 text-left mb-4 lg:mb-0 lg:text-center"
+        >
+          <h3 className="text-xl font-semibold">Chat</h3>
+        </div>
+        {/* Content Paragraph */}
+        <div className="flex-1 text-center lg:text-center px-4">
+          <p className="text-lg text-gray-600">
+            Chat with all your customers. Share products and offers with them in
+            chat, answer their queries. All your business chat in one place.
+          </p>
+          {/* Button */}
+          <button
+            onClick={() => alert("Button Clicked!")}
+            className="mt-4 text-blue-600 border-b-2 border-blue-600 hover:border-blue-800"
+          >
+            Learn More
+          </button>
+        </div>
+
+        {/* Image */}
+        <div className="flex-1 text-right">
+          <div className="relative w-full max-w-xs">
+            <Image
+              src="/images/chat.png"
+              alt="Description of image"
+              layout="responsive"
+              width={500}
+              height={300}
+              className="image"
+            />
+          </div>
+        </div>
+      </div>
+      {/* New Section with subheading, content, and image */}
+      <div className="flex flex-col lg:flex-row items-center justify-center px-4 py-8">
+        {/* Subheading */}
+        <div
+          ref={sectionsRef.crm}
+          className="flex-1 text-left mb-4 lg:mb-0 lg:text-center"
+        >
+          <h3 className="text-xl font-semibold">CRM</h3>
+        </div>
+        {/* Content Paragraph */}
+        <div className="flex-1 text-center lg:text-center px-4">
+          <p className="text-lg text-gray-600">
+            All your customer relationship metrics in one place. High value
+            customers, churned customers, Most frequent buyers etc. With the
+            inbuilt chat, you can reach out to them too.
+          </p>
+        </div>
+
+        {/* Image */}
+        <div className="flex-1 text-right">
+          <div className="relative w-full max-w-xs">
+            <Image
+              src="/images/crm.png"
+              alt="Description of image"
+              layout="responsive"
+              width={500}
+              height={300}
+              className="image"
+            />
+          </div>
+        </div>
+      </div>
+      {/* New Section with subheading, content, and image */}
+      <div className="flex flex-col lg:flex-row items-center justify-center px-4 py-8">
+        {/* Subheading */}
+        <div
+          ref={sectionsRef.analytics}
+          className="flex-1 text-left mb-4 lg:mb-0 lg:text-center"
+        >
+          <h3 className="text-xl font-semibold">Analytics & Reporting</h3>
+        </div>
+        {/* Content Paragraph */}
+        <div className="flex-1 text-center lg:text-center px-4">
+          <p className="text-lg text-gray-600">
+            Detailed analytics of your business metrics. Slice and dice all your
+            business data to any granularity according to your needs. Built
+            using Druid and Superset.
+          </p>
+        </div>
+
+        {/* Image */}
+        <div className="flex-1 text-right">
+          <div className="relative w-full max-w-xs">
+            <Image
+              src="/images/crm.png"
+              alt="Description of image"
+              layout="responsive"
+              width={500}
+              height={300}
+              className="image"
+            />
+          </div>
         </div>
       </div>
     </div>
