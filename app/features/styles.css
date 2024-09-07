@@ -1,27 +1,27 @@
 .image-container {
     position: relative;
-    width: 100%; /* Full width of its parent */
-    max-width: 16rem; /* Set a max-width for your images */
-    height: auto; /* Height will adjust according to width */
-    margin: 0 auto; /* Center the container */
+    width: 100%; 
+    max-width: 16rem; 
+    height: auto; 
+    margin: 0 auto; 
 }
 
 .image {
-    width: 100%; /* Make the image fit the width of its container */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the container without distortion */
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
 }
 
-/* Adjusting margin and padding for the image container */
+
 .image-container {
     margin-bottom: 2rem;
-    padding: 0; /* Reduce the space below each image container */
+    padding: 0; 
 }
 
-/* Adjusting padding for the paragraph section */
+
 .paragraph-section {
-    margin-top: 2rem; /* Reduce the space above the paragraph section */
-    padding: 0; /* Optional: Remove any extra padding */
+    margin-top: 2rem; 
+    padding: 0; 
 }
 
 
