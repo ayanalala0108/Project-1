@@ -102,8 +102,8 @@ export default function Home() {
                   src={`/images/image${i}.png`} // Replace with your image paths
                   alt={`Image ${i}`}
                   layout="responsive"
-                  width={640} // Adjust width as needed
-                  height={480} // Adjust height as needed
+                  width={640} 
+                  height={480} 
                   className="image"
                 />
               </div>
