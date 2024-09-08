@@ -182,6 +182,45 @@ export default function Home() {
           </div>
         </section>
       </main>
+      {/* Footer */}
+      <footer className="w-full bg-[#1E3A8A] text-white py-4">
+        <div className="container mx-auto px-4">
+          {/* Main Footer Content */}
+          <div className="flex flex-col mb-4">
+            <div className="flex items-center justify-between mb-2">
+              {/* Footer Image */}
+              <div className="relative w-8 h-8">
+                <Image
+                  src="/icon.png"
+                  alt="Footer Icon"
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+              {/* Footer Text */}
+              <p className="text-sm text-center flex-1 mx-2">
+                Start growing your business today
+              </p>
+            </div>
+            {/* Horizontal Line */}
+            <hr className="w-full border-gray-300 mb-4" />
+          </div>
+          {/* Additional Content */}
+          <div className="flex flex-col items-start">
+            <p className="text-sm mb-2">
+              © 2020 - 2021 Mahamela Technologies Pvt Ltd
+            </p>
+            <div className="relative w-32 h-10">
+              <Image
+                src="/images/google-play-icon.png"
+                alt="Google Play"
+                fill
+                style={{ objectFit: "contain" }}
+              />
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
