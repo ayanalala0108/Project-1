@@ -80,7 +80,7 @@ const developerfirst = () => {
               <iframe
                 height={360}
                 width={640}
-                src="https://www.youtube.com/embed/IlIaIHQpl2M" // Replace with your video ID
+                src="https://www.youtube.com/embed/IlIaIHQpl2M" 
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -131,7 +131,7 @@ const developerfirst = () => {
               <iframe
                 height={360}
                 width={640}
-                src="https://www.youtube.com/embed/z2cI5_99vTA" // Replace with your new video ID
+                src="https://www.youtube.com/embed/z2cI5_99vTA" 
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -148,7 +148,7 @@ const developerfirst = () => {
               <iframe
                 height={360}
                 width={640}
-                src="https://www.youtube.com/embed/IlIaIHQpl2M" // Replace with your video ID
+                src="https://www.youtube.com/embed/IlIaIHQpl2M" 
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
