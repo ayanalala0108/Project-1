@@ -39,10 +39,10 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white flex flex-col">
       {/* Container for top of the screen elements */}
-      <div className="flex items-center justify-between p-4 mb-0">
+      <div className="flex items-center justify-between p-8 mb-0">
         {/* Icon and Features button */}
         <div className="flex items-center space-x-4">
-          <div className="relative w-12 h-12">
+          <div className="relative w-14 h-14">
             <Image
               src="/icon.png"
               alt="Small Image"
@@ -52,20 +52,20 @@ export default function Home() {
           </div>
           <button
             onClick={() => handleButtonClick("Features")}
-            className="px-4 py-2 border-2 border-purple-600 rounded-full text-blue-600"
+            className="px-5 py-2 border-2 border-purple-600 rounded-full text-blue-600"
           >
             Features
           </button>
         </div>
 
         {/* Login and SignUp buttons */}
-        <div className="flex space-x-2">
-          <button className="px-4 py-2 border-2 border-purple-600 rounded-full text-blue-600">
+        <div className="flex space-x-8">
+          <button className="px-8 py-2 border-2 border-purple-600 rounded-full text-blue-600">
             Login
           </button>
           <button
             onClick={() => handleButtonClick("Button 2")}
-            className="px-4 py-2 border-2 border-purple-600 rounded-full text-gray-600"
+            className="px-8 py-2 border-2 border-purple-600 rounded-full text-gray-600"
           >
             SignUp
           </button>
@@ -75,17 +75,20 @@ export default function Home() {
       {/* Centered paragraph section */}
       <div className="flex flex-1 justify-center items-start mt-0 px-4 paragraph-section">
         <div className="text-center max-w-2xl w-full">
-          <h1 className="text-3xl text-center font-bold mb-2">
+          <h1 className="text-3xl text-center font-bold  p-5">
             Powerful B2B Features
           </h1>
-          <p className="text-l text-left text-gray-500">
+          <p className="text-sm text-left text-[#8288A4] p-5">
             Shopping is increasingly becoming mobile. In growing economies like
             China and India, mobile is the primary device to access the
-            internet. By 2021, about 73% of global ecommerce sales are expected
-            to happen on mobile. Prokure is built from a mobile-first market in
-            India. All the major features can be used from the mobile app. Why
-            use a PC when you can run your whole business conveniently from the
-            phone?
+            internet.{" "}
+            <span className="text-[#8a8af2]">
+              By 2021, about 73% of global ecommerce sales are expected to
+              happen on mobile.
+            </span>{" "}
+            Procure is built from a mobile-first market in India. All the major
+            features can be used from the mobile app. Why use a PC when you can
+            run your whole business conveniently from the phone?
           </p>
         </div>
       </div>
@@ -99,11 +102,11 @@ export default function Home() {
                 style={{ height: "auto", width: "100%" }}
               >
                 <Image
-                  src={`/images/image${i}.png`} // Replace with your image paths
+                  src={`/images/image${i}.png`}
                   alt={`Image ${i}`}
                   layout="responsive"
-                  width={640} 
-                  height={480} 
+                  width={640}
+                  height={480}
                   className="image"
                 />
               </div>
@@ -246,14 +249,14 @@ export default function Home() {
         </div>
         {/* Content Paragraph */}
         <div className="flex-1 text-center lg:text-center px-4">
-          <p className="text-lg text-gray-600">
+          <p className="text-sm text-[#7a7a7a;]">
             Upload your inventory either on at a time or in bulk, Doing it on
             mobile is as simple as making a facebook post.
           </p>
           {/* Button */}
           <button
             onClick={() => alert("Button Clicked!")}
-            className="mt-4 text-blue-600 border-b-2 border-blue-600 hover:border-blue-800"
+            className="mt-4 text-[#2196f3] border-b-2 border-[#2196f3] hover:border-blue-800 font-bold"
           >
             Learn More
           </button>
@@ -284,14 +287,14 @@ export default function Home() {
         </div>
         {/* Content Paragraph */}
         <div className="flex-1 text-center lg:text-center px-4">
-          <p className="text-lg text-gray-600">
+          <p className="text-sm text-[#7a7a7a]">
             Add all your customers in one go. Shifting all your customers to a
-            new business platform can’t get easier than this
+            new business platform can't get easier than this
           </p>
           {/* {Button} */}
           <button
             onClick={() => alert("Button Clicked!")}
-            className="mt-4 text-blue-600 border-b-2 border-blue-600 hover:border-blue-800"
+            className="mt-4 text-[#2196f3] border-b-2 border-[#2196f3] hover:border-blue-800 font-bold"
           >
             Learn More
           </button>
@@ -329,7 +332,7 @@ export default function Home() {
         </div>
         {/* Content Paragraph */}
         <div className="flex-1 text-center lg:text-center px-4">
-          <p className="text-lg text-gray-600">
+          <p className="text-sm text-[#7a7a7a]">
             No more of those mundane B2B sourcing processes. Placing an order is
             as simple as placing an order in Amazon. All this, while the complex
             b2b pricing and supply chain logics are taken care of in the
@@ -338,7 +341,7 @@ export default function Home() {
           {/* Button */}
           <button
             onClick={() => alert("Button Clicked!")}
-            className="mt-4 text-blue-600 border-b-2 border-blue-600 hover:border-blue-800"
+            className="mt-4 text-[#2196f3] border-b-2 border-[#2196f3] hover:border-blue-800 font-bold"
           >
             Learn More
           </button>
@@ -375,13 +378,13 @@ export default function Home() {
         </div>
         {/* Content Paragraph */}
         <div className="flex-1 text-center lg:text-center px-4">
-          <p className="text-lg text-gray-600">
+          <p className="text-sm text-[#7a7a7a]">
             Logged in as a sales staff, they can take orders from your customers
             in the app
           </p>
           <button
             onClick={() => alert("Button Clicked!")}
-            className="mt-4 text-blue-600 border-b-2 border-blue-600 hover:border-blue-800"
+            className="mt-4 text-[#2196f3] border-b-2 border-[#2196f3] hover:border-blue-800 font-bold"
           >
             Learn More
           </button>
@@ -405,7 +408,7 @@ export default function Home() {
         </div>
         {/* Content Paragraph */}
         <div className="flex-1 text-center lg:text-center px-4">
-          <p className="text-lg text-gray-600">
+          <p className="text-sm text-[#7a7a7a]">
             Confirm, reject, edit, allot it to different warehouses, all of it
             can happen with a couple of clicks. Easier if done from the mobile
             app.
@@ -413,7 +416,7 @@ export default function Home() {
           {/* Button */}
           <button
             onClick={() => alert("Button Clicked!")}
-            className="mt-4 text-blue-600 border-b-2 border-blue-600 hover:border-blue-800"
+            className="mt-4 text-[#2196f3] border-b-2 border-[#2196f3] hover:border-blue-800 font-bold"
           >
             Learn More
           </button>
@@ -446,7 +449,7 @@ export default function Home() {
         </div>
         {/* Content Paragraph */}
         <div className="flex-1 text-center lg:text-center px-4">
-          <p className="text-lg text-gray-600">
+          <p className="text-sm text-[#7a7a7a]">
             Do you want to manually allot orders to different sellers in your
             supply chain? Should your sellers be able to control the product
             prices? Take complete control of the order flow in your supply chain
@@ -487,7 +490,7 @@ export default function Home() {
         </div>
         {/* Content Paragraph */}
         <div className="flex-1 text-center lg:text-center px-4">
-          <p className="text-lg text-gray-600">
+          <p className="text-sm text-[#7a7a7a]">
             Create shipments of your orders, review the estimated cost and ETA
             of all major logistics providers and ship using your preferred
             provider. In mobile app, all these can be done with 6 clicks.
@@ -526,7 +529,7 @@ export default function Home() {
         </div>
         {/* Content Paragraph */}
         <div className="flex-1 text-center lg:text-center px-4">
-          <p className="text-lg text-gray-600">
+          <p className="text-sm text-[#7a7a7a]">
             Create shipments of your orders, we tell you the most optimal routes
             to deliver these shipments. Assign each route to one of your
             delivery staff. They can login to their app and see the assigned
@@ -564,14 +567,14 @@ export default function Home() {
         </div>
         {/* Content Paragraph */}
         <div className="flex-1 text-center lg:text-center px-4">
-          <p className="text-lg text-gray-600">
+          <p className="text-sm text-[#7a7a7a]">
             Chat with all your customers. Share products and offers with them in
             chat, answer their queries. All your business chat in one place.
           </p>
           {/* Button */}
           <button
             onClick={() => alert("Button Clicked!")}
-            className="mt-4 text-blue-600 border-b-2 border-blue-600 hover:border-blue-800"
+            className="mt-4 text-[#2196f3] border-b-2 border-[#2196f3] hover:border-blue-800 font-bold"
           >
             Learn More
           </button>
@@ -602,7 +605,7 @@ export default function Home() {
         </div>
         {/* Content Paragraph */}
         <div className="flex-1 text-center lg:text-center px-4">
-          <p className="text-lg text-gray-600">
+          <p className="text-sm text-[#7a7a7a]">
             All your customer relationship metrics in one place. High value
             customers, churned customers, Most frequent buyers etc. With the
             inbuilt chat, you can reach out to them too.
@@ -634,7 +637,7 @@ export default function Home() {
         </div>
         {/* Content Paragraph */}
         <div className="flex-1 text-center lg:text-center px-4">
-          <p className="text-lg text-gray-600">
+          <p className="text-sm text-[#7a7a7a]">
             Detailed analytics of your business metrics. Slice and dice all your
             business data to any granularity according to your needs. Built
             using Druid and Superset.
@@ -656,7 +659,7 @@ export default function Home() {
         </div>
       </div>
       {/* Footer */}
-      <footer className="w-full bg-[#1E3A8A] text-white py-4">
+      <footer className="w-full bg-[#0d6efd] text-white py-4">
         <div className="container mx-auto px-4">
           {/* Main Footer Content */}
           <div className="flex flex-col mb-4">
@@ -671,7 +674,7 @@ export default function Home() {
                 />
               </div>
               {/* Footer Text */}
-              <p className="text-sm text-center flex-1 mx-2">
+              <p className="text-lg text-center flex-1 mx-2">
                 Start growing your business today
               </p>
             </div>

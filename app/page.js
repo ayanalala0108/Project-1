@@ -17,11 +17,11 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white flex flex-col">
       {/* Container for top of the screen elements */}
-      <div className="flex justify-between items-start p-4">
+      <div className="flex justify-between items-start p-8">
         {/* Top-left corner content */}
         <div className="flex items-center space-x-4">
           {/* Icon and text */}
-          <div className="relative w-12 h-12">
+          <div className="relative w-14 h-14">
             <Image
               src="/icon.png"
               alt="Small Image"
@@ -32,7 +32,7 @@ export default function Home() {
 
           <button
             onClick={() => handleButtonClick("Features")}
-            className="px-4 py-2 border-2 border-purple-600 rounded-full text-blue-600"
+            className="px-5 py-2 border-2 border-purple-600 rounded-full text-blue-600"
           >
             Features
           </button>
@@ -40,12 +40,12 @@ export default function Home() {
 
         {/* Top-right corner content */}
         <div className="flex space-x-2">
-          <button className="px-4 py-2 border-2 border-purple-600 rounded-full text-blue-600">
+          <button className="px-8 py-2 border-2 border-purple-600 rounded-full text-blue-600">
             Login
           </button>
           <button
             onClick={() => handleButtonClick("Button 2")}
-            className="px-4 py-2 border-2 border-purple-600 rounded-full text-gray-600"
+            className="px-8 py-2 border-2 border-purple-600 rounded-full text-gray-600"
           >
             SignUp
           </button>
@@ -57,10 +57,10 @@ export default function Home() {
         <section className="flex flex-col md:flex-row items-center md:items-start mb-8">
           {/* Text */}
           <div className="flex flex-col md:w-1/2 md:mr-4 p-4">
-            <h1 className="text-2xl md:text-4xl font-bold mb-2">
+            <h1 className="text-4xl md:text-4xl font-bold mb-10">
               Grow with powerful mobile first B2B e-commerce platform.
             </h1>
-            <p className="text-sm md:text-base text-gray-500">
+            <p className="text-l md:text-base text-[#686464]">
               B2B e-commerce is at an inflection point. By 2020, the size of U.S
               B2B eCommerce market is expected to be twice that of B2C
               eCommerce. Businesses are fast shifting to B2B eCommerce but
@@ -96,17 +96,25 @@ export default function Home() {
 
           {/* Text */}
           <div className="flex flex-col md:w-1/2 md:ml-4 p-4">
-            <h1 className="text-xl md:text-3xl font-bold mb-2">Mobile First</h1>
-            <p className="text-sm md:text-base mb-4 text-gray-500">
+            <h1 className="text-4xl md:text-3xl font-bold mb-5">
+              Mobile First
+            </h1>
+            <p className="text-l md:text-base mb-4 text-[#686464]">
               Business buyers are also consumers who have experienced B2C
               ecommerce and they expect the same convenient shopping experience
-              in their B2B ecommerce platform. Mobile first and an amazon like
-              shopping experience. In Namaste, you can use ALL the features from
-              your mobile app. Built for a mobile first world.
+              in their B2B ecommerce platform.
+              <span className="block text-[brown]">
+                Mobile first and an amazon like shopping experience.
+              </span>{" "}
+            </p>
+
+            <p className="text-l md:text-base mb-5 text-[#686464]">
+              In Namaste, you can use ALL the features from your mobile app.
+              Built for a mobile first world.
             </p>
             <button
               onClick={() => handleButtonClick("Learn More")}
-              className="w-32 px-2 py-1 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-sm"
+              className="w-32 px-2 py-3 bg-[#0d6efd] text-white rounded-md hover:bg-blue-700 transition-colors text-l"
             >
               Learn More
             </button>
@@ -117,20 +125,23 @@ export default function Home() {
         <section className="flex flex-col md:flex-row items-center md:items-start mb-8">
           {/* Text content */}
           <div className="flex flex-col md:w-1/2 md:mr-4 p-8">
-            <h1 className="text-xl md:text-3xl font-bold mb-2">
+            <h1 className="text-4xl md:text-3xl font-bold mb-5">
               All the complicated B2B use cases
             </h1>
-            <p className="text-sm md:text-base mb-4 text-gray-500">
-              B2B ecommerce is a lot more complicated than B2C
-              ecommerce.Multi-tier distribution selling, geo-fencing, advanced
-              pricing rules, fully customizable order and payment flows across
-              all layers of supply chain, on the ground logistics and sales
-              management etc.With Namaste you can manage all the complex B2B
-              business requirements effortlessly.
+            <p className="text-l md:text-base mb-5 text-[#686464]">
+              B2B ecommerce is a lot more complicated than B2C ecommerce.
+              <span className="text-[green]">
+                Multi-tier distribution selling, geo-fencing, advanced pricing
+                rules, fully customizable order and payment flows across all
+                layers of supply chain, on the ground logistics and sales
+                management etc.
+              </span>
+              With Namaste you can manage all the complex B2B business
+              requirements effortlessly.
             </p>
             <button
               onClick={() => handleButtonClick("Learn More")}
-              className="w-32 px-2 py-1 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-sm"
+              className="w-32 px-2 py-3 bg-[#0d6efd] text-white rounded-md hover:bg-blue-700 transition-colors text-l"
             >
               Learn More
             </button>
@@ -163,19 +174,21 @@ export default function Home() {
 
           {/* Text */}
           <div className="flex flex-col md:w-1/2 md:ml-4 p-4">
-            <h1 className="text-xl md:text-3xl font-bold mb-2">
+            <h1 className="text-4xl md:text-3xl font-bold mb-5">
               Developer First
             </h1>
-            <p className="text-sm md:text-base mb-4 text-gray-500">
+            <p className="text-l md:text-base mb-4 text-[#686464]">
               Commerce is essentailly movement of goods from A to B and movement
               of payment in the opposite direction. But between A and B, it can
               take varied forms (marketplace, own inventory, drop shipping etc.
+            </p>
+            <p className="text-l md:text-base mb-5 text-[brown]">
               In Namaste, you can use ALL the features from your mobile app.
               Built for a mobile first world.
             </p>
             <button
               onClick={() => handleButtonClick("Learn More")}
-              className="w-32 px-2 py-1 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-sm"
+              className="w-32 px-2 py-3 bg-[#0d6efd] text-white rounded-md hover:bg-blue-700 transition-colors text-l"
             >
               Learn More
             </button>
@@ -183,7 +196,7 @@ export default function Home() {
         </section>
       </main>
       {/* Footer */}
-      <footer className="w-full bg-[#1E3A8A] text-white py-4">
+      <footer className="w-full bg-[#0d6efd] text-white py-4">
         <div className="container mx-auto px-4">
           {/* Main Footer Content */}
           <div className="flex flex-col mb-4">
