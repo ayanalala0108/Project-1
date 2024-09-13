@@ -11,48 +11,51 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
-      {/* Container for top of the screen elements */}
-      <div className="flex justify-between items-start p-8">
-        {/* Top-left corner content */}
-        <div className="flex items-center space-x-4">
-          {/* Icon and text */}
-          <div className="relative w-14 h-14">
-            <Image
-              src="/icon.png"
-              alt="Small Image"
-              fill
-              style={{ objectFit: "cover" }}
-            />
+      {/* Main Content */}
+      <main className="flex-1">
+        {/* Container for top of the screen elements */}
+        <div className="flex justify-between items-start p-8">
+          {/* Top-left corner content */}
+          <div className="flex items-center space-x-4">
+            {/* Icon and text */}
+            <div className="relative w-14 h-14">
+              <Image
+                src="/icon.png"
+                alt="Small Image"
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+
+            <button
+              onClick={() => handleButtonClick("/features")}
+              className="px-5 py-2 border-2 border-purple-600 rounded-full text-[#2196f3]"
+            >
+              Features
+            </button>
           </div>
 
-          <button
-            onClick={() => handleButtonClick("/features")}
-            className="px-5 py-2 border-2 border-purple-600 rounded-full text-blue-600"
-          >
-            Features
-          </button>
+          {/* Top-right corner content */}
+          <div className="flex space-x-2">
+            <button className="px-8 py-2 border-2 border-purple-600 rounded-full text-[#2196f3]">
+              Login
+            </button>
+            <button
+              onClick={() => handleButtonClick("Button 2")}
+              className="px-8 py-2 border-2 border-purple-600 rounded-full text-[#7d7d7e]"
+            >
+              SignUp
+            </button>
+          </div>
         </div>
-
-        {/* Top-right corner content */}
-        <div className="flex space-x-2">
-          <button className="px-8 py-2 border-2 border-purple-600 rounded-full text-blue-600">
-            Login
-          </button>
-          <button
-            onClick={() => handleButtonClick("Button 2")}
-            className="px-8 py-2 border-2 border-purple-600 rounded-full text-gray-600"
-          >
-            SignUp
-          </button>
-        </div>
-      </div>
+      </main>
 
       {/* Main Content Area */}
       <main className="flex flex-col p-4 md:p-8">
         <section className="flex flex-col md:flex-row items-center md:items-start mb-8">
           {/* Text */}
           <div className="flex flex-col md:w-1/2 md:mr-4 p-4">
-            <h1 className="text-4xl md:text-4xl font-bold mb-10">
+            <h1 className="text-4xl md:text-4xl font-medium mb-10">
               Grow with powerful mobile first B2B e-commerce platform.
             </h1>
             <p className="text-l md:text-base text-[#686464]">
@@ -91,7 +94,7 @@ export default function Home() {
 
           {/* Text */}
           <div className="flex flex-col md:w-1/2 md:ml-4 p-4">
-            <h1 className="text-4xl md:text-3xl font-bold mb-5">
+            <h1 className="text-4xl md:text-3xl font-medium mb-5">
               Mobile First
             </h1>
             <p className="text-l md:text-base mb-4 text-[#686464]">
@@ -120,7 +123,7 @@ export default function Home() {
         <section className="flex flex-col md:flex-row items-center md:items-start mb-8">
           {/* Text content */}
           <div className="flex flex-col md:w-1/2 md:mr-4 p-8">
-            <h1 className="text-4xl md:text-3xl font-bold mb-5">
+            <h1 className="text-4xl md:text-3xl font-medium mb-5">
               All the complicated B2B use cases
             </h1>
             <p className="text-l md:text-base mb-5 text-[#686464]">
@@ -169,7 +172,7 @@ export default function Home() {
 
           {/* Text */}
           <div className="flex flex-col md:w-1/2 md:ml-4 p-4">
-            <h1 className="text-4xl md:text-3xl font-bold mb-5">
+            <h1 className="text-4xl md:text-3xl font-medium mb-5">
               Developer First
             </h1>
             <p className="text-l md:text-base mb-4 text-[#686464]">

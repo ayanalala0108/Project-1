@@ -52,7 +52,7 @@ export default function Home() {
           </div>
           <button
             onClick={() => handleButtonClick("Features")}
-            className="px-5 py-2 border-2 border-purple-600 rounded-full text-blue-600"
+            className="px-5 py-2 border-2 border-purple-600 rounded-full text-[#2196f3]"
           >
             Features
           </button>
@@ -60,12 +60,12 @@ export default function Home() {
 
         {/* Login and SignUp buttons */}
         <div className="flex space-x-8">
-          <button className="px-8 py-2 border-2 border-purple-600 rounded-full text-blue-600">
+          <button className="px-8 py-2 border-2 border-purple-600 rounded-full text-[#2196f3]">
             Login
           </button>
           <button
             onClick={() => handleButtonClick("Button 2")}
-            className="px-8 py-2 border-2 border-purple-600 rounded-full text-gray-600"
+            className="px-8 py-2 border-2 border-purple-600 rounded-full text-[#7d7d7e]"
           >
             SignUp
           </button>
@@ -75,7 +75,7 @@ export default function Home() {
       {/* Centered paragraph section */}
       <div className="flex flex-1 justify-center items-start mt-0 px-4 paragraph-section">
         <div className="text-center max-w-2xl w-full">
-          <h1 className="text-3xl text-center font-bold  p-5">
+          <h1 className="text-3xl text-center font-medium  p-5">
             Powerful B2B Features
           </h1>
           <p className="text-sm text-left text-[#8288A4] p-5">
@@ -236,12 +236,12 @@ export default function Home() {
       </div>
       {/* Centered heading section */}
       <div className="flex justify-center items-center py-8">
-        <h1 className="text-3xl font-semibold text-center">Onboard</h1>
+        <h1 className="text-3xl font-medium text-center">Onboard</h1>
       </div>
       {/* New Section with subheading, content, and image */}
       <div
         ref={sectionsRef.productUpload}
-        className="flex flex-col lg:flex-row items-center justify-center px-4 py-8"
+        className="flex flex-col lg:flex-row items-center justify-center px-4 py-8 border-[hsla(0, 0%, 85%, .58)]"
       >
         {/* Subheading */}
         <div className="flex-1 text-left mb-4 lg:mb-0 lg:text-center">
@@ -276,6 +276,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <hr className="w-full border-[hsla(0, 0%, 85%, .58)] border-solid mb-4" />
       {/* New Section with subheading, content, and image */}
       <div
         ref={sectionsRef.buyerAddition}
@@ -316,10 +317,10 @@ export default function Home() {
       </div>
       {/* Centered heading section */}
       <div className="flex justify-center items-center py-8">
-        <h1 className="text-3xl font-semibold text-center">Manage Orders</h1>
+        <h1 className="text-3xl font-medium text-center">Manage Orders</h1>
       </div>
       <div className="flex justify-center items-left">
-        <h1 className="text-2xl font-semibold text-left">Buyer</h1>
+        <h1 className="text-2xl font-medium text-left">Buyer</h1>
       </div>
       {/* New Section with subheading, content, and image */}
       <div
@@ -364,7 +365,7 @@ export default function Home() {
 
       {/* New Section with subheading, content, and image */}
       <div className="flex justify-center items-center py-8">
-        <h1 className="text-2xl font-semibold text-left">Seller</h1>
+        <h1 className="text-2xl font-medium text-left">Seller</h1>
       </div>
       <div className="flex flex-col lg:flex-row items-center justify-center px-4 py-8">
         {/* Subheading */}
@@ -472,10 +473,10 @@ export default function Home() {
       </div>
       {/* Centered heading section */}
       <div className="flex justify-center items-center py-8">
-        <h1 className="text-3xl font-semibold text-center">Deliver Goods</h1>
+        <h1 className="text-3xl font-medium text-center">Deliver Goods</h1>
       </div>
       <div className="flex justify-center items-left">
-        <h1 className="text-2xl font-semibold text-left">
+        <h1 className="text-2xl font-medium text-left">
           Using third party logistics
         </h1>
       </div>
@@ -512,9 +513,7 @@ export default function Home() {
         </div>
       </div>
       <div className="flex justify-center items-left">
-        <h1 className="text-2xl font-semibold text-left">
-          Using own logistics
-        </h1>
+        <h1 className="text-2xl font-medium text-left">Using own logistics</h1>
       </div>
       {/* New Section with subheading, content, and image */}
       <div
@@ -554,7 +553,7 @@ export default function Home() {
       </div>
       {/* Centered heading section */}
       <div className="flex justify-center items-center py-8">
-        <h1 className="text-3xl font-semibold text-center">Analysis & CRM</h1>
+        <h1 className="text-3xl font-medium text-center">Analysis & CRM</h1>
       </div>
       {/* New Section with subheading, content, and image */}
       <div className="flex flex-col lg:flex-row items-center justify-center px-4 py-8">

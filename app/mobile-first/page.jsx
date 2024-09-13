@@ -52,7 +52,7 @@ export default function Home() {
           </div>
           <button
             onClick={() => handleButtonClick("Features")}
-            className="px-5 py-2 border-2 border-purple-600 rounded-full text-blue-600"
+            className="px-5 py-2 border-2 border-purple-600 rounded-full text-[#2196f3]"
           >
             Features
           </button>
@@ -60,12 +60,12 @@ export default function Home() {
 
         {/* Login and SignUp buttons */}
         <div className="flex space-x-8">
-          <button className="px-8 py-2 border-2 border-purple-600 rounded-full text-blue-600">
+          <button className="px-8 py-2 border-2 border-purple-600 rounded-full text-[#2196f3]">
             Login
           </button>
           <button
             onClick={() => handleButtonClick("Button 2")}
-            className="px-8 py-2 border-2 border-purple-600 rounded-full text-gray-600"
+            className="px-8 py-2 border-2 border-purple-600 rounded-full text-[#7d7d7e]"
           >
             SignUp
           </button>
