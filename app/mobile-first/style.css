@@ -1,0 +1,33 @@
+.image-container {
+    position: relative;
+    width: 100%; 
+    max-width: 16rem; 
+    height: auto; 
+    margin: 0 auto; 
+}
+
+.image {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+}
+
+
+.image-container {
+    margin-bottom: 2rem;
+    padding: 0; 
+}
+
+
+.paragraph-section {
+    margin-top: 2rem; 
+    padding: 0; 
+}
+
+
+.text-container {
+    padding: 10px;
+    text-align: center;
+}
+
+

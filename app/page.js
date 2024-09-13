@@ -5,13 +5,8 @@ import { useRouter } from "next/navigation";
 
 export default function Home() {
   const router = useRouter();
-  const handleButtonClick = (buttonName) => {
-    if (buttonName === "Features") {
-      router.push("/features");
-    } else {
-      // what happens when each button is clicked
-      alert(`${buttonName} button clicked!`);
-    }
+  const handleButtonClick = (path) => {
+    router.push(path);
   };
 
   return (
@@ -31,7 +26,7 @@ export default function Home() {
           </div>
 
           <button
-            onClick={() => handleButtonClick("Features")}
+            onClick={() => handleButtonClick("/features")}
             className="px-5 py-2 border-2 border-purple-600 rounded-full text-blue-600"
           >
             Features
@@ -113,7 +108,7 @@ export default function Home() {
               Built for a mobile first world.
             </p>
             <button
-              onClick={() => handleButtonClick("Learn More")}
+              onClick={() => handleButtonClick("/mobile-first")}
               className="w-32 px-2 py-3 bg-[#0d6efd] text-white rounded-md hover:bg-blue-700 transition-colors text-l"
             >
               Learn More
@@ -140,7 +135,7 @@ export default function Home() {
               requirements effortlessly.
             </p>
             <button
-              onClick={() => handleButtonClick("Learn More")}
+              onClick={() => handleButtonClick("/features")}
               className="w-32 px-2 py-3 bg-[#0d6efd] text-white rounded-md hover:bg-blue-700 transition-colors text-l"
             >
               Learn More
@@ -216,7 +211,7 @@ export default function Home() {
               </p>
             </div>
             {/* Horizontal Line */}
-            <hr className="w-full border-gray-300 mb-4" />
+            <hr className="w-full border-[#82c4f8] mb-4" />
           </div>
           {/* Additional Content */}
           <div className="flex flex-col items-start">

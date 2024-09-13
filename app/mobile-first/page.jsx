@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import "./styles.css";
+import "./style.css";
 import React, { useRef } from "react";
 
 export default function Home() {
@@ -75,9 +75,7 @@ export default function Home() {
       {/* Centered paragraph section */}
       <div className="flex flex-1 justify-center items-start mt-0 px-4 paragraph-section">
         <div className="text-center max-w-2xl w-full">
-          <h1 className="text-3xl text-center font-bold  p-5">
-            Powerful B2B Features
-          </h1>
+          <h1 className="text-3xl text-center font-bold  p-5">Mobile First</h1>
           <p className="text-sm text-left text-[#8288A4] p-5">
             Shopping is increasingly becoming mobile. In growing economies like
             China and India, mobile is the primary device to access the
@@ -86,9 +84,9 @@ export default function Home() {
               By 2021, about 73% of global ecommerce sales are expected to
               happen on mobile.
             </span>{" "}
-            Procure is built from a mobile-first market in India. All the major
+            Namaste is built from a mobile first market India. All the major
             features can be used from the mobile app. Why use a PC when you can
-            run your whole business conveniently from the phone?
+            run your whole business conveniently from the phone
           </p>
         </div>
       </div>
