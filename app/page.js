@@ -182,7 +182,7 @@ export default function Home() {
               Built for a mobile first world.
             </p>
             <button
-              onClick={() => handleButtonClick("Learn More")}
+              onClick={() => handleButtonClick("/developer-first")}
               className="w-32 px-2 py-3 bg-[#0d6efd] text-white rounded-md hover:bg-blue-700 transition-colors text-l"
             >
               Learn More
