@@ -37,7 +37,10 @@ export default function Home() {
 
           {/* Top-right corner content */}
           <div className="flex space-x-2">
-            <button className="px-8 py-2 border-2 border-purple-600 rounded-full text-[#2196f3]">
+            <button
+              onClick={() => handleButtonClick("/login")}
+              className="px-8 py-2 border-2 border-purple-600 rounded-full text-[#2196f3]"
+            >
               Login
             </button>
             <button
