@@ -44,7 +44,7 @@ export default function Home() {
               Login
             </button>
             <button
-              onClick={() => handleButtonClick("Button 2")}
+              onClick={() => handleButtonClick("/sign-up")}
               className="px-8 py-2 border-2 border-purple-600 rounded-full text-[#7d7d7e]"
             >
               SignUp

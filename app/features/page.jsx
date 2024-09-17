@@ -23,17 +23,8 @@ export default function Home() {
     analytics: useRef(null),
   };
 
-  const handleButtonClick = (sectionName) => {
-    if (sectionName === "Features") {
-      router.push("/features");
-    } else if (sectionsRef[sectionName]) {
-      sectionsRef[sectionName].current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    } else {
-      //alert(`${buttonName} button clicked!`);
-    }
+  const handleButtonClick = (path) => {
+    router.push(path);
   };
 
   return (
@@ -51,7 +42,7 @@ export default function Home() {
             />
           </div>
           <button
-            onClick={() => handleButtonClick("Features")}
+            onClick={() => handleButtonClick("/features")}
             className="px-5 py-2 border-2 border-purple-600 rounded-full text-[#2196f3]"
           >
             Features
@@ -60,11 +51,14 @@ export default function Home() {
 
         {/* Login and SignUp buttons */}
         <div className="flex space-x-8">
-          <button className="px-8 py-2 border-2 border-purple-600 rounded-full text-[#2196f3]">
+          <button
+            onClick={() => handleButtonClick("/login")}
+            className="px-8 py-2 border-2 border-purple-600 rounded-full text-[#2196f3]"
+          >
             Login
           </button>
           <button
-            onClick={() => handleButtonClick("Button 2")}
+            onClick={() => handleButtonClick("/sign-up")}
             className="px-8 py-2 border-2 border-purple-600 rounded-full text-[#7d7d7e]"
           >
             SignUp

@@ -34,11 +34,14 @@ const developerfirst = () => {
 
           {/* Login and SignUp buttons */}
           <div className="flex space-x-8">
-            <button className="px-8 py-2 border-2 border-purple-600 rounded-full text-[#2196f3]">
+            <button
+              onClick={() => handleButtonClick("/login")}
+              className="px-8 py-2 border-2 border-purple-600 rounded-full text-[#2196f3]"
+            >
               Login
             </button>
             <button
-              //onClick={() => handleButtonClick("Button 2")}
+              onClick={() => handleButtonClick("sign-up")}
               className="px-8 py-2 border-2 border-purple-600 rounded-full text-[#7d7d7e]"
             >
               SignUp
@@ -80,7 +83,7 @@ const developerfirst = () => {
               <iframe
                 height={360}
                 width={640}
-                src="https://www.youtube.com/embed/IlIaIHQpl2M" 
+                src="https://www.youtube.com/embed/IlIaIHQpl2M"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -131,7 +134,7 @@ const developerfirst = () => {
               <iframe
                 height={360}
                 width={640}
-                src="https://www.youtube.com/embed/z2cI5_99vTA" 
+                src="https://www.youtube.com/embed/z2cI5_99vTA"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -148,7 +151,7 @@ const developerfirst = () => {
               <iframe
                 height={360}
                 width={640}
-                src="https://www.youtube.com/embed/IlIaIHQpl2M" 
+                src="https://www.youtube.com/embed/IlIaIHQpl2M"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
