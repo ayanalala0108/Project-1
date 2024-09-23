@@ -181,7 +181,7 @@ const developerfirst = () => {
           <div className="flex flex-col mb-4">
             <div className="flex items-center justify-between mb-2">
               {/* Footer Image */}
-              <div className="relative w-8 h-8">
+              <div className="relative w-8 h-8 ml-5">
                 <Image
                   src="/icon.png"
                   alt="Footer Icon"
@@ -199,10 +199,10 @@ const developerfirst = () => {
           </div>
           {/* Additional Content */}
           <div className="flex flex-col items-start">
-            <p className="text-sm mb-2">
+            <p className="text-sm mb-2 ml-5">
               © 2020 - 2021 Mahamela Technologies Pvt Ltd
             </p>
-            <div className="relative w-32 h-10">
+            <div className="relative w-32 h-10 ml-5">
               <Image
                 src="/images/google-play-icon.png"
                 alt="Google Play"
