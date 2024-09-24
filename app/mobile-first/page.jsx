@@ -651,7 +651,7 @@ export default function Home() {
         </div>
       </div>
       {/* Footer */}
-      <footer className="w-full bg-[#0d6efd] text-white py-4">
+      <footer className="w-full bg-[#0d6efd] text-white py-20">
         <div className="container mx-auto px-4">
           {/* Main Footer Content */}
           <div className="flex flex-col mb-4">

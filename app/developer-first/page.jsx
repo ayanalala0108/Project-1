@@ -175,7 +175,7 @@ const developerfirst = () => {
         </div>
       </main>
       {/* Footer */}
-      <footer className="w-full bg-[#0d6efd] text-white py-4">
+      <footer className="w-full bg-[#0d6efd] text-white py-20">
         <div className="px-0">
           {/* Main Footer Content */}
           <div className="flex flex-col mb-4">
@@ -190,7 +190,7 @@ const developerfirst = () => {
                 />
               </div>
               {/* Footer Text */}
-              <p className="text-l text-center flex-1 mx-2">
+              <p className="text-lg text-center flex-1 mx-2">
                 Start growing your business today
               </p>
             </div>
