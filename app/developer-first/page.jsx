@@ -13,7 +13,7 @@ const developerfirst = () => {
       {/* Main Content */}
       <main className="flex-1">
         {/* Container for top of the screen elements */}
-        <div className="flex items-center justify-between p-8 mb-0">
+        <div className="flex flex-col md:flex-row items-center justify-between p-8 mb-0">
           {/* Icon and Features button */}
           <div className="flex items-center space-x-4 pl-5">
             <div className="relative w-14 h-14">
@@ -26,7 +26,7 @@ const developerfirst = () => {
             </div>
             <button
               onClick={() => handleButtonClick("/features")}
-              className="px-5 py-2 border-2 border-purple-600 rounded-full text-[#2196f3]"
+              className="px-5 py-2 border-2 border-purple-600 rounded-full text-[#2196f3] w-full md:w-auto"
             >
               Features
             </button>
@@ -36,21 +36,21 @@ const developerfirst = () => {
           <div className="flex space-x-8">
             <button
               onClick={() => handleButtonClick("/login")}
-              className="px-8 py-2 border-2 border-purple-600 rounded-full text-[#2196f3]"
+              className="px-8 py-2 border-2 border-purple-600 rounded-full text-[#2196f3] w-full md:w-auto"
             >
               Login
             </button>
             <button
               onClick={() => handleButtonClick("sign-up")}
-              className="px-8 py-2 border-2 border-purple-600 rounded-full text-[#7d7d7e]"
+              className="px-8 py-2 border-2 border-purple-600 rounded-full text-[#7d7d7e] w-full md:w-auto"
             >
               SignUp
             </button>
           </div>
         </div>
         {/* Centered paragraph section */}
-        <div className="flex flex-1 justify-center items-start mt-0 px-4 paragraph-section">
-          <div className="text-center max-w-2xl w-full">
+        <div className="flex flex-col justify-center items-center mt-0 px-4 paragraph-section">
+          <div className="text-center md:max-w-2xl w-full">
             <h1 className="text-4xl text-center font-bold  p-5">
               Developer First
             </h1>
@@ -76,7 +76,7 @@ const developerfirst = () => {
           </div>
         </div>
         {/* YouTube video and paragraph section */}
-        <div className="flex flex-col md:flex-row items-start p-8">
+        <div className="flex flex-col md:flex-row items-start p-8 space-y-4 md:space-y-0 md:space-x-4">
           {/* YouTube video */}
           <div className="md:w-1/2 mb-4 md:mb-20 md:pr-4">
             <div className="relative w-full h-50 md:h-70 pr-15">
@@ -108,7 +108,7 @@ const developerfirst = () => {
           </div>
         </div>
         {/* New Section: Paragraph on Left, YouTube Video on Right */}
-        <div className="flex flex-col md:flex-row items-start p-8">
+        <div className="flex flex-col md:flex-row items-start p-8 space-y-4 md:space-y-0 md:space-x-4">
           {/* Paragraph with heading */}
           <div className="md:w-1/2 pr-20">
             <h2 className="text-3xl font-semibold mb-4  pr-20">
@@ -144,7 +144,7 @@ const developerfirst = () => {
           </div>
         </div>
         {/* Last YouTube video and paragraph section */}
-        <div className="flex flex-col md:flex-row items-start p-8">
+        <div className="flex flex-col md:flex-row items-start p-8 space-y-4 md:space-y-0 md:space-x-4">
           {/* YouTube video */}
           <div className="md:w-1/2 mb-4 md:mb-20 md:pr-4">
             <div className="relative w-full h-50 md:h-70 pr-10">
