@@ -1,17 +1,40 @@
 "use client";
+import { useEffect, useState } from "react";
+
 export default function Home() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  // Load stored credentials from localStorage
+  useEffect(() => {
+    const storedUsername = localStorage.getItem("username");
+    const storedPassword = localStorage.getItem("password");
+
+    if (storedUsername) setUsername(storedUsername);
+    if (storedPassword) setPassword(storedPassword);
+  }, []);
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    // Save credentials to localStorage
+    localStorage.setItem("username", username);
+    localStorage.setItem("password", password);
+
+    // Perform login logic here
+    console.log("Logging in with:", { username, password });
+  };
+
   return (
     <div className="h-screen bg-[#000a3e] flex flex-col items-center">
       <header className="w-full flex items-center justify-center fixed top-0 left-0 bg-[#000a3e] p-5">
         <div className="flex items-center px-4 py-2 space-x-40">
-          {/* First image on the left*/}
           <img
             src="/icon2.png"
             alt="Icon 1"
             className="w-auto h-48px pr-20 mr-20"
           />
           <div className="flex items-center space-x-2 pl-20">
-            {/* Second image and text */}
             <img src="/icon3.png" alt="Icon 2" className="w-7 h-6" />
             <span className="text-white text-sm">New to Namaste Business?</span>
             <button className="bg-[#C1036D] text-white px-4 py-2 rounded-3xl">
@@ -22,9 +45,7 @@ export default function Home() {
       </header>
       <main className="flex flex-1 items-center justify-center relative">
         <div className="relative">
-          {/* Pink box with background image */}
           <div className="w-[850px] h-[500px] bg-[#C1036D] relative flex items-center justify-start rounded-xl">
-            {/* Heading text */}
             <div
               className="absolute left-10 top-10 w-[300px] opacity-0 animate-moveLeft"
               style={{ animationDelay: "1s" }}
@@ -48,7 +69,6 @@ export default function Home() {
                 animationDelay: "1s",
               }}
             ></div>
-            {/* Login box */}
             <div
               className="absolute top-1/2 left-1/2 transform -translate-x-1/2"
               style={{
@@ -63,7 +83,7 @@ export default function Home() {
               >
                 <div className="p-4 h-full pl-10 pr-10">
                   <h2 className="text-2xl font-medium mb-4 pt-7 pb-2">Login</h2>
-                  <form>
+                  <form onSubmit={handleLogin}>
                     <div className="mb-4">
                       <label
                         htmlFor="username"
@@ -74,6 +94,8 @@ export default function Home() {
                       <input
                         id="username"
                         type="text"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
                         className="mt-1 block w-full px-3 py-2 rounded-md bg-[#F3F5FD]"
                       />
                     </div>
@@ -94,6 +116,8 @@ export default function Home() {
                     <input
                       id="password"
                       type="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
                       className="mt-0 block w-full px-3 py-2 rounded-md shadow-sm bg-[#F3F5FD] mb-6"
                     />
                     <button
